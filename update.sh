@@ -21,11 +21,11 @@ echo "fetching $ZIP_URL"
 
 rm -rf $REVISION
 mkdir $REVISION
-pushd $REVISION
+cd $REVISION
 curl -# $ZIP_URL > $ZIP_FILE
 echo "unzipping.."
 unzip $ZIP_FILE
-popd
+cd ../
 rm -f ./latest
 ln -s $REVISION/chrome-linux/ ./latest
 
