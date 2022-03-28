@@ -28,4 +28,4 @@ unzip $ZIP_FILE
 cd ../
 rm -f ./latest
 ln -s $REVISION/chrome-linux/ ./latest
-
+echo $REVISION > chrome.txt
